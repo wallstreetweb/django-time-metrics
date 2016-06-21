@@ -19,5 +19,4 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('time_metrics.urls', namespace='time_metrics')),
 ]
