@@ -28,9 +28,9 @@ def total_weeks_aggregated():
     """
     return total of weeks aggregates to MetricWeek model
     """
-    from wsw_stats.models import MetricWeek
+    from .models import WeekMetric
     try:
-        first_week = MetricWeek.objects.all().order_by('-date_up')[0].date_up
+        first_week = WeekMetric.objects.all().order_by('-date_up')[0].date_up
     except IndexError:
         first_week = week_for_date(datetime.date.today())
     return (datetime.date.today() - first_week).days / 7
