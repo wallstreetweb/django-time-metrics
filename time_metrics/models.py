@@ -8,6 +8,8 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from model_utils.models import TimeStampedModel
+
+from .utils import get_quarter_number
 from .querysets import MetricItemQuerySet, DayMetricQuerySet, WeekMetricQuerySet, MonthMetricQuerySet, QuarterMetricQuerySet, YearMetricQuerySet
 
 
